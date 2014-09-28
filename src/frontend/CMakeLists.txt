@@ -33,4 +33,4 @@ add_library(frontend
   tokenizer.cc
 )
 
-target_link_libraries(frontend -L${LLVM_LIBRARY_DIR} ${LLVM_MODULE_LIBS} ${LLVM_LFLAGS} -lm stdlib)
+target_link_libraries(frontend -L${LLVM_LIBRARY_DIR} ${LLVM_MODULE_LIBS} ${LLVM_LFLAGS} -lm stdlib -ldl -lz -lpthread -lncurses)
